@@ -1,7 +1,5 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/hops-logo.png";
-
-const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Hops+Beer+Ponta+D%27Areia+S%C3%A3o+Luis";
 
 export default function Header() {
   return (
@@ -18,7 +16,7 @@ export default function Header() {
         Seu bar da fábrica. Chope vivo e fresco, sempre — 10 torneiras com
         rótulos fixos e sazonais.
       </p>
-      <a className="addr" href={MAPS_URL} target="_blank" rel="noopener noreferrer">
+      <Link className="addr" to="/localizacao">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -31,7 +29,7 @@ export default function Header() {
           <circle cx="12" cy="9" r="2.5" />
         </svg>
         R. Quarenta, Ponta D'Areia
-      </a>
+      </Link>
     </header>
   );
 }

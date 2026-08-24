@@ -1,6 +1,6 @@
 const IFOOD_URL =
   "https://www.ifood.com.br/delivery/sao-luis-ma/hopsbeer-ponta-d39areia/a392be65-cfb9-44f9-9cec-238520068c2e?utm_medium=share";
-const WHATSAPP_URL = "https://wa.me/message/SP3URAEX2527K1";
+const WHATSAPP_URL = "https://wa.me/5598984787249";
 
 export default function PrimaryActions() {
   return (

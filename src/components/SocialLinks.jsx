@@ -1,4 +1,4 @@
-const WHATSAPP_URL = "https://wa.me/message/SP3URAEX2527K1";
+const WHATSAPP_URL = "https://wa.me/5598984787249";
 const INSTAGRAM_URL = "https://instagram.com/hops.beer";
 const FACEBOOK_URL =
   "https://facebook.com/111231470783930?ref=xav_ig_profile_page";

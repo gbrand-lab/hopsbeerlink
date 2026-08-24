@@ -1,7 +1,7 @@
-const MENU_HOPS_URL =
-  "https://drive.google.com/file/d/15Z3Vn56305Qoo8prn1SlN_mzHwrytj3t/view?usp=share_link";
-const MENU_HAPPY_URL =
-  "https://drive.google.com/file/d/1u5P9QMXVvO23otJFHZjAXvHd-DwnPv1e/view?usp=share_link";
+import { Link } from "react-router-dom";
+
+const MENU_HOPS_URL = "/cardapio/hops";
+const MENU_HAPPY_URL = "/cardapio/happy-hour";
 
 const menus = [
   {
@@ -65,20 +65,14 @@ export default function MenuCards() {
       <p className="section-label">Cardápios</p>
       <div className="card-list">
         {menus.map((menu) => (
-          <a
-            key={menu.title}
-            className="card"
-            href={menu.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link key={menu.title} className="card" to={menu.href}>
             <div className="card-icon">{menu.icon}</div>
             <div className="card-text">
               <p className="card-title">{menu.title}</p>
               <p className="card-sub">{menu.subtitle}</p>
             </div>
             <Arrow />
-          </a>
+          </Link>
         ))}
       </div>
     </div>
