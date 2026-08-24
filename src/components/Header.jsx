@@ -13,7 +13,7 @@ export default function Header() {
         <span>Beer</span>
       </h1>
       <p className="bio">
-        Seu bar da fábrica. Chope vivo e fresco, sempre — 10 torneiras com
+        Seu bar da fábrica. Chope vivo e fresco, sempre 10 torneiras com
         rótulos fixos e sazonais.
       </p>
       <Link className="addr" to="/localizacao">
