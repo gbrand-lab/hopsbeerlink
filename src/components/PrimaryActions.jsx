@@ -8,12 +8,15 @@ const actions = [
     kicker: "Delivery",
     title: "iFood",
     cta: "Peça agora!",
+    icon: "/logo_ifood_amarelo_transparente-removebg-preview.png",
+    iconWide: true,
   },
   {
     href: WHATSAPP_URL,
     kicker: "Fale conosco",
     title: "WhatsApp",
     cta: "Chame no zap!",
+    icon: "/wpp-icon.png",
   },
 ];
 
@@ -25,16 +28,23 @@ export default function PrimaryActions() {
         {actions.map((action) => (
           <a
             key={action.title}
-            className="banner"
+            className={`banner${action.icon ? " banner--icon-only" : ""}`}
             href={action.href}
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className="banner-glow" aria-hidden="true"></div>
             <div className="banner-text">
-              <p className="banner-kicker">{action.kicker}</p>
-              <p className="banner-title">{action.title}</p>
-              <span className="banner-cta">{action.cta}</span>
+              {action.icon && (
+                <img
+                  src={action.icon}
+                  alt={action.title}
+                  className={`banner-icon${action.iconWide ? " banner-icon--wide" : ""}`}
+                />
+              )}
+              {!action.icon && <p className="banner-kicker">{action.kicker}</p>}
+              {!action.icon && <p className="banner-title">{action.title}</p>}
+              {!action.icon && <span className="banner-cta">{action.cta}</span>}
             </div>
           </a>
         ))}

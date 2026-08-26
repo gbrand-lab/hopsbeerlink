@@ -9,12 +9,14 @@ const menus = [
     title: "Cardápio Hops",
     kicker: "Chopes & rótulos",
     cta: "Clique aqui e veja o cardápio!",
+    image: "/cardapio.png",
   },
   {
     href: MENU_HAPPY_URL,
     title: "Cardápio Happy",
     kicker: "Promoções do dia",
     cta: "Clique aqui e veja as promoções!",
+    image: "/cardapio-happy.png",
   },
 ];
 
@@ -24,7 +26,12 @@ export default function MenuCards() {
       <p className="section-label">Cardápios</p>
       <div className="banner-list">
         {menus.map((menu) => (
-          <Link key={menu.title} className="banner" to={menu.href}>
+          <Link
+            key={menu.title}
+            className="banner"
+            to={menu.href}
+            style={{ backgroundImage: `url(${menu.image})` }}
+          >
             <div className="banner-glow" aria-hidden="true"></div>
             <div className="banner-text">
               <p className="banner-kicker">{menu.kicker}</p>

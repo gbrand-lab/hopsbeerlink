@@ -228,11 +228,21 @@
     padding: 26px 22px;
     min-height: 132px;
     border-radius: 14px;
-    background: linear-gradient(160deg, var(--surface-2) 0%, var(--black) 78%);
+    background-color: var(--black);
+    background-size: cover;
+    background-position: center;
     border: 1px solid var(--line);
     box-shadow: var(--shadow);
     text-decoration: none;
     transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .banner::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background: linear-gradient(160deg, rgba(10,10,8,0.55) 0%, rgba(10,10,8,0.9) 78%);
   }
   .banner:hover{ border-color: var(--yellow); transform: translateY(-2px); }
   .banner-glow{
@@ -243,8 +253,35 @@
     height: 220px;
     background: radial-gradient(closest-side, rgba(254,185,33,0.28), transparent 72%);
     pointer-events: none;
+    z-index: 1;
   }
   .banner-text{ position: relative; z-index: 1; }
+  .banner--icon-only{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-icon{
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  .banner-icon.banner-icon--wide{
+    width: 100px;
+    height: auto;
+  }
+  .banner--icon-only .banner-icon:not(.banner-icon--wide){
+    width: 64px;
+    height: 64px;
+  }
+  .banner-grid .banner-text:has(.banner-icon){
+    text-align: center;
+  }
+  .banner-grid .banner-text:has(.banner-icon) .banner-cta{
+    margin: 0 auto;
+  }
   .banner-kicker{
     margin: 0 0 6px;
     font-size: 0.68rem;
