@@ -71,26 +71,6 @@ export default function Cardapio() {
             </p>
           </object>
         </div>
-
-        <a
-          className="row cardapio-download"
-          href={menu.file}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
-            <path d="M4 17v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" />
-          </svg>
-          <span>Abrir em nova aba / baixar PDF</span>
-        </a>
       </div>
     </div>
   );
